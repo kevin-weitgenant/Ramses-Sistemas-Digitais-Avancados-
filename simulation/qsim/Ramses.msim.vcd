@@ -1,0 +1,268 @@
+$comment
+	File created using the following command:
+		vcd file Ramses.msim.vcd -direction
+$end
+$date
+	Sun Nov 21 18:04:38 2021
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module decodificador_vlg_vec_tst $end
+$var reg 4 ! entrada [3:0] $end
+$var wire 1 " saida [15] $end
+$var wire 1 # saida [14] $end
+$var wire 1 $ saida [13] $end
+$var wire 1 % saida [12] $end
+$var wire 1 & saida [11] $end
+$var wire 1 ' saida [10] $end
+$var wire 1 ( saida [9] $end
+$var wire 1 ) saida [8] $end
+$var wire 1 * saida [7] $end
+$var wire 1 + saida [6] $end
+$var wire 1 , saida [5] $end
+$var wire 1 - saida [4] $end
+$var wire 1 . saida [3] $end
+$var wire 1 / saida [2] $end
+$var wire 1 0 saida [1] $end
+$var wire 1 1 saida [0] $end
+$var wire 1 2 sampler $end
+$scope module i1 $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var tri1 1 6 devclrn $end
+$var tri1 1 7 devpor $end
+$var tri1 1 8 devoe $end
+$var wire 1 9 saida[0]~output_o $end
+$var wire 1 : saida[1]~output_o $end
+$var wire 1 ; saida[2]~output_o $end
+$var wire 1 < saida[3]~output_o $end
+$var wire 1 = saida[4]~output_o $end
+$var wire 1 > saida[5]~output_o $end
+$var wire 1 ? saida[6]~output_o $end
+$var wire 1 @ saida[7]~output_o $end
+$var wire 1 A saida[8]~output_o $end
+$var wire 1 B saida[9]~output_o $end
+$var wire 1 C saida[10]~output_o $end
+$var wire 1 D saida[11]~output_o $end
+$var wire 1 E saida[12]~output_o $end
+$var wire 1 F saida[13]~output_o $end
+$var wire 1 G saida[14]~output_o $end
+$var wire 1 H saida[15]~output_o $end
+$var wire 1 I entrada[3]~input_o $end
+$var wire 1 J entrada[2]~input_o $end
+$var wire 1 K entrada[1]~input_o $end
+$var wire 1 L entrada[0]~input_o $end
+$var wire 1 M Equal0~0_combout $end
+$var wire 1 N Equal0~1_combout $end
+$var wire 1 O Equal0~2_combout $end
+$var wire 1 P Equal0~3_combout $end
+$var wire 1 Q Equal0~4_combout $end
+$var wire 1 R Equal0~5_combout $end
+$var wire 1 S Equal0~6_combout $end
+$var wire 1 T Equal0~7_combout $end
+$var wire 1 U saida~2_combout $end
+$var wire 1 V saida~3_combout $end
+$var wire 1 W saida~4_combout $end
+$var wire 1 X Equal0~8_combout $end
+$var wire 1 Y saida~5_combout $end
+$var wire 1 Z Equal0~9_combout $end
+$var wire 1 [ saida~6_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1101 !
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+1$
+0#
+0"
+x2
+03
+14
+x5
+16
+17
+18
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+1F
+0G
+0H
+1I
+1J
+0K
+1L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+1Y
+0Z
+1[
+$end
+#90000
+b101 !
+b111 !
+b110 !
+0L
+1K
+0I
+02
+0Y
+1R
+0F
+1?
+0$
+1+
+#180000
+b1110 !
+b1100 !
+b1101 !
+1L
+0K
+1I
+12
+1Y
+0R
+1F
+0?
+1$
+0+
+#270000
+b1001 !
+b1 !
+0J
+0I
+02
+0Y
+1M
+0F
+1:
+0$
+10
+#360000
+b0 !
+b1000 !
+0L
+1I
+12
+1T
+0M
+1A
+0:
+1)
+00
+#450000
+b1010 !
+b1110 !
+b1111 !
+1L
+1K
+1J
+02
+0[
+0T
+1H
+0A
+1"
+0)
+#540000
+b111 !
+b11 !
+0J
+0I
+12
+1[
+1O
+0H
+1<
+0"
+1.
+#630000
+b10 !
+0L
+02
+0O
+1N
+0<
+1;
+0.
+1/
+#720000
+b0 !
+b1000 !
+b1100 !
+b1101 !
+1L
+0K
+1J
+1I
+12
+1Y
+0N
+1F
+0;
+1$
+0/
+#900000
+b1100 !
+0L
+02
+0Y
+1X
+0F
+1E
+0$
+1%
+#990000
+b1110 !
+b110 !
+b10 !
+1K
+0J
+0I
+12
+0X
+1N
+0E
+1;
+0%
+1/
+#1000000

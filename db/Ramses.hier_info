@@ -1,294 +1,79 @@
-|somador_subtrator_16bits
-c0 => aux_b[0].IN0
-c0 => aux_b[1].IN0
-c0 => aux_b[2].IN0
-c0 => aux_b[3].IN0
-c0 => aux_b[4].IN0
-c0 => aux_b[5].IN0
-c0 => aux_b[6].IN0
-c0 => aux_b[7].IN0
-c0 => aux_b[8].IN0
-c0 => aux_b[9].IN0
-c0 => aux_b[10].IN0
-c0 => aux_b[11].IN0
-c0 => aux_b[12].IN0
-c0 => aux_b[13].IN0
-c0 => aux_b[14].IN0
-c0 => aux_b[15].IN0
-c0 => somador:G1:0:SCs.cin
-a[0] => somador:G1:0:SCs.a
-a[1] => somador:G1:1:SCs.a
-a[2] => somador:G1:2:SCs.a
-a[3] => somador:G1:3:SCs.a
-a[4] => somador:G1:4:SCs.a
-a[5] => somador:G1:5:SCs.a
-a[6] => somador:G1:6:SCs.a
-a[7] => somador:G1:7:SCs.a
-a[8] => somador:G1:8:SCs.a
-a[9] => somador:G1:9:SCs.a
-a[10] => somador:G1:10:SCs.a
-a[11] => somador:G1:11:SCs.a
-a[12] => somador:G1:12:SCs.a
-a[13] => somador:G1:13:SCs.a
-a[14] => somador:G1:14:SCs.a
-a[15] => somador:G1:15:SCs.a
-b[0] => aux_b[0].IN1
-b[1] => aux_b[1].IN1
-b[2] => aux_b[2].IN1
-b[3] => aux_b[3].IN1
-b[4] => aux_b[4].IN1
-b[5] => aux_b[5].IN1
-b[6] => aux_b[6].IN1
-b[7] => aux_b[7].IN1
-b[8] => aux_b[8].IN1
-b[9] => aux_b[9].IN1
-b[10] => aux_b[10].IN1
-b[11] => aux_b[11].IN1
-b[12] => aux_b[12].IN1
-b[13] => aux_b[13].IN1
-b[14] => aux_b[14].IN1
-b[15] => aux_b[15].IN1
-s[0] <= somador:G1:0:SCs.s
-s[1] <= somador:G1:1:SCs.s
-s[2] <= somador:G1:2:SCs.s
-s[3] <= somador:G1:3:SCs.s
-s[4] <= somador:G1:4:SCs.s
-s[5] <= somador:G1:5:SCs.s
-s[6] <= somador:G1:6:SCs.s
-s[7] <= somador:G1:7:SCs.s
-s[8] <= somador:G1:8:SCs.s
-s[9] <= somador:G1:9:SCs.s
-s[10] <= somador:G1:10:SCs.s
-s[11] <= somador:G1:11:SCs.s
-s[12] <= somador:G1:12:SCs.s
-s[13] <= somador:G1:13:SCs.s
-s[14] <= somador:G1:14:SCs.s
-s[15] <= somador:G1:15:SCs.s
-cout <= somador:G1:15:SCs.cout
-ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:0:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:1:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:2:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:3:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:4:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:5:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:6:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:7:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:8:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:9:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:10:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:11:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:12:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:13:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:14:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somador_subtrator_16bits|somador:\G1:15:SCs
-cin => cout.IN0
-cin => cout.IN0
-cin => s.IN1
-a => cout.IN0
-a => cout.IN1
-a => s.IN0
-b => cout.IN1
-b => cout.IN1
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+|decodificador
+entrada[0] => Equal0.IN3
+entrada[0] => Equal1.IN0
+entrada[0] => Equal2.IN3
+entrada[0] => Equal3.IN1
+entrada[0] => Equal4.IN3
+entrada[0] => Equal5.IN1
+entrada[0] => Equal6.IN3
+entrada[0] => Equal7.IN2
+entrada[0] => Equal8.IN3
+entrada[0] => Equal9.IN1
+entrada[0] => Equal10.IN3
+entrada[0] => Equal11.IN2
+entrada[0] => Equal12.IN3
+entrada[0] => Equal13.IN2
+entrada[0] => Equal14.IN3
+entrada[1] => Equal0.IN2
+entrada[1] => Equal1.IN3
+entrada[1] => Equal2.IN0
+entrada[1] => Equal3.IN0
+entrada[1] => Equal4.IN2
+entrada[1] => Equal5.IN3
+entrada[1] => Equal6.IN1
+entrada[1] => Equal7.IN1
+entrada[1] => Equal8.IN2
+entrada[1] => Equal9.IN3
+entrada[1] => Equal10.IN1
+entrada[1] => Equal11.IN1
+entrada[1] => Equal12.IN2
+entrada[1] => Equal13.IN3
+entrada[1] => Equal14.IN2
+entrada[2] => Equal0.IN1
+entrada[2] => Equal1.IN2
+entrada[2] => Equal2.IN2
+entrada[2] => Equal3.IN3
+entrada[2] => Equal4.IN0
+entrada[2] => Equal5.IN0
+entrada[2] => Equal6.IN0
+entrada[2] => Equal7.IN0
+entrada[2] => Equal8.IN1
+entrada[2] => Equal9.IN2
+entrada[2] => Equal10.IN2
+entrada[2] => Equal11.IN3
+entrada[2] => Equal12.IN1
+entrada[2] => Equal13.IN1
+entrada[2] => Equal14.IN1
+entrada[3] => Equal0.IN0
+entrada[3] => Equal1.IN1
+entrada[3] => Equal2.IN1
+entrada[3] => Equal3.IN2
+entrada[3] => Equal4.IN1
+entrada[3] => Equal5.IN2
+entrada[3] => Equal6.IN2
+entrada[3] => Equal7.IN3
+entrada[3] => Equal8.IN0
+entrada[3] => Equal9.IN0
+entrada[3] => Equal10.IN0
+entrada[3] => Equal11.IN0
+entrada[3] => Equal12.IN0
+entrada[3] => Equal13.IN0
+entrada[3] => Equal14.IN0
+saida[0] <= <GND>
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[8] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[9] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[10] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[11] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[12] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[13] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[14] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[15] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 

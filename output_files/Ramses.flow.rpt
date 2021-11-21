@@ -1,5 +1,5 @@
 Flow report for Ramses
-Mon Nov 15 11:08:11 2021
+Sun Nov 21 18:04:35 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,16 +40,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 15 11:08:11 2021           ;
+; Flow Status                        ; Successful - Sun Nov 21 18:04:35 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Ramses                                          ;
-; Top-level Entity Name              ; somador_subtrator_16bits                        ;
+; Top-level Entity Name              ; decodificador                                   ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 35                                              ;
-;     Total combinational functions  ; 35                                              ;
+; Total logic elements               ; 15                                              ;
+;     Total combinational functions  ; 15                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 51                                              ;
+; Total pins                         ; 20                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -66,27 +66,27 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/15/2021 11:08:10 ;
+; Start date & time ; 11/21/2021 18:02:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Ramses              ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                              ;
-+-------------------------------------+---------------------------------+---------------+--------------------------+------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name              ; Section Id ;
-+-------------------------------------+---------------------------------+---------------+--------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 167300353061066.163698529015008 ; --            ; --                       ; --         ;
-; IP_TOOL_NAME                        ; RAM: 1-PORT                     ; --            ; --                       ; --         ;
-; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --                       ; --         ;
-; MISC_FILE                           ; MEM.cmp                         ; --            ; --                       ; --         ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; somador_subtrator_16bits ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; somador_subtrator_16bits ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; somador_subtrator_16bits ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --                       ; --         ;
-; TOP_LEVEL_ENTITY                    ; somador_subtrator_16bits        ; Ramses        ; --                       ; --         ;
-+-------------------------------------+---------------------------------+---------------+--------------------------+------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                   ;
++-------------------------------------+---------------------------------+---------------+---------------+------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name   ; Section Id ;
++-------------------------------------+---------------------------------+---------------+---------------+------------+
+; COMPILER_SIGNATURE_ID               ; 167300353061066.163752853210372 ; --            ; --            ; --         ;
+; IP_TOOL_NAME                        ; RAM: 1-PORT                     ; --            ; --            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --            ; --         ;
+; MISC_FILE                           ; MEM.cmp                         ; --            ; --            ; --         ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; decodificador ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; decodificador ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; decodificador ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --            ; --         ;
+; TOP_LEVEL_ENTITY                    ; decodificador                   ; Ramses        ; --            ; --         ;
++-------------------------------------+---------------------------------+---------------+---------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -95,7 +95,9 @@ applicable agreement for further details.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4565 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4560 MB             ; 00:00:01                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,6 +107,8 @@ applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-T60HLJO  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T60HLJO  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-T60HLJO  ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -112,6 +116,8 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Ramses -c Ramses
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Ramses -c Ramses --vector_source=C:/Users/kevin/Desktop/Ramses-Sistemas-Digitais-Avancados-/decoder.vwf --testbench_file=./simulation/qsim/Ramses.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Ramses -c Ramses
 
 
 
