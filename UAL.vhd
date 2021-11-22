@@ -17,8 +17,8 @@ ENTITY UAL IS
 	ARCHITECTURE comportamento OF UAL IS
 	SIGNAL cout_add,cout_soma,ov,ov_soma,ov_sub: STD_LOGIC;   
 	
-	SIGNAL AUX_SAIDA,resultado_soma,resultado_sub: STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-	signal add,sub,cout : STD_LOGIC;
+	SIGNAL AUX_SAIDA,result_sumsub,resultado_sub: STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+	signal operacao,cout : STD_LOGIC;
 	 
 	
 	COMPONENT somador_subtrator_16bits
@@ -33,11 +33,11 @@ END COMPONENT;
 
 	
 	BEGIN	
-	add<= '0';
-	sub<= '1';
+
 	
-	SOMADOR: somador_subtrator_16bits PORT MAP (add, A, B, resultado_soma, cout_add, ov_soma);
-	SUBTRATOR: somador_subtrator_16bits PORT MAP (sub, A, B, resultado_sub, cout_soma, ov_sub);
+	
+	SOMADOR_SUBTRATOR: somador_subtrator_16bits PORT MAP (operacao, A, B, result_sumsub, cout_add, ov_soma);   --prof recomendou otimizar
+	
 	
 	
 	PROCESS (controle, A, B)
@@ -45,16 +45,23 @@ END COMPONENT;
 
 	
 	CASE controle IS
-		WHEN "00" => AUX_SAIDA <= A;
-		WHEN "11" => AUX_SAIDA <= A AND B;
-		WHEN "01" => AUX_SAIDA <= resultado_soma;
-						 cout<= cout_add;
-						 ov<= ov_soma;
-		WHEN "10" => AUX_SAIDA <= resultado_sub;	
-		             cout<= cout_soma;
-						 ov<= ov_sub;
+		WHEN "000" => operacao<= '0';-- A+B 
+						  AUX_SAIDA<= result_sumsub;
+		
+		WHEN "001" => operacao <= '1'; -- A-B  
+						  AUX_SAIDA<= result_sumsub;
+						  
+		WHEN "010" => AUX_SAIDA <= A AND B;  -- A & B        
 
-		when others => AUX_SAIDA <= A ; 
+		WHEN "011" => AUX_SAIDA <= A OR B;	-- A||B
+
+			
+		WHEN "100" => AUX_SAIDA <= NOT A;            -- not A
+		WHEN "101" => AUX_SAIDA <= (NOT A) + 1;     -- neg X
+
+
+		WHEN "110" => AUX_SAIDA <= '0' & A(N-1 DOWNTO 1);    -- shr A
+		when others => AUX_SAIDA <= B;                -- B
 
 		END CASE;	
 	

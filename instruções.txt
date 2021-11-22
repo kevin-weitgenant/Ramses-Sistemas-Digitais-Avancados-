@@ -1,0 +1,10 @@
+ADD   0000 reg,end
+JMP   0001 completar com zero, endereço 
+JZ    0011 completar com zero, endereço 
+JN    0100  completar com zero, endereço 
+load  0101 reg,end
+store 0110 reg,end
+sub   0111 reg,end
+XOR   1000 reg,end
+AND   1001 reg,end
+OR    1010  reg,end

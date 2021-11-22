@@ -44,7 +44,7 @@ ENTITY MEM IS
 	(
 		address		: IN STD_LOGIC_VECTOR (8 DOWNTO 0);
 		clock		: IN STD_LOGIC  := '1';
-		data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+
 		wren		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 	);
@@ -104,7 +104,6 @@ BEGIN
 	PORT MAP (
 		address_a => address,
 		clock0 => clock,
-		data_a => data,
 		wren_a => wren,
 		q_a => sub_wire0
 	);

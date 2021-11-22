@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Ramses
-Sun Nov 21 18:04:35 2021
+Mon Nov 22 00:21:50 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Nov 21 18:04:35 2021 ;
+; EDA Netlist Writer Status ; Successful - Mon Nov 22 00:21:50 2021 ;
 ; Revision Name             ; Ramses                                ;
-; Top-level Entity Name     ; decodificador                         ;
+; Top-level Entity Name     ; UAL                                   ;
 ; Family                    ; Cyclone IV GX                         ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -80,14 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Nov 21 18:04:35 2021
+    Info: Processing started: Mon Nov 22 00:21:49 2021
 Info: Command: quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Ramses -c Ramses
-Info (119004): Automatically selected device EP4CGX15BF14C6 for design Ramses
 Info (204019): Generated file Ramses.vo in folder "C:/Users/kevin/Desktop/Ramses-Sistemas-Digitais-Avancados-/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4560 megabytes
-    Info: Processing ended: Sun Nov 21 18:04:35 2021
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4576 megabytes
+    Info: Processing ended: Mon Nov 22 00:21:50 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
